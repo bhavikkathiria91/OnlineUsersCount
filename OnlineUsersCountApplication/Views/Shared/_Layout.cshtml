@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/OnlineUsersCountStyle")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryui")
+        @Scripts.Render("~/bundles/commonscript")
+        <script type="text/javascript">
+            var GlobalUrlPath = '@Url.Content("~/")';
+        </script>
+        @RenderSection("scripts", required: false)
+    </head>
+    <body>
+            <div class="app-menu">
+                <div class="header"> Online Users Count</div>
+                
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Using Ajax", "UsingAjax", "OnlineUsersCount")</li>
+                            <li>@Html.ActionLink("Using SignalR", "UsingSignalR", "OnlineUsersCount")</li>
+                        </ul>
+                    </nav>
+            </div>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section>
+                @RenderBody()
+            </section>
+        </div>
+    </body>
+</html>

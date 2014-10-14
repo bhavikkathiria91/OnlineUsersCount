@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Online Users Count";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="users-online">
+    Users Online
+    <br>
+    <span id="userCount"></span>
+</div>
+
+
+@Scripts.Render("~/bundles/usingajax")
+<script type="text/javascript">
+    //Call GetOnlineUsersCount function to get the online users count after the DOM is ready on page load.
+    $(document).ready(function () {
+        // Get Online Users count for the first time.
+        GetOnlineUsersCount();
+
+        // Set the interval of 2 seconds to get online users count.
+        setInterval(function () {
+            GetOnlineUsersCount();
+        }, 2000);
+      
+        // Write a method to notify the server about window close event.
+        //NotifyWindowClose();
+
+        $(window).bind("beforeunload", function () {
+            return confirm("Do you really want to close?");
+        })
+       
+    });
+ 
+    $(window).bind("beforeunload", function () {
+        return confirm("Do you really want to close?");
+    })
+</script>

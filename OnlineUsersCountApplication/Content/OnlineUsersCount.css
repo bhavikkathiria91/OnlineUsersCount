@@ -1,0 +1,47 @@
+﻿/*Layout Page*/
+.app-menu{
+    background-color: #666666;
+    width:101%;
+    height:80px;
+    color: #FFFFFF;
+    margin: -10px 0px 0px -7px;
+}
+
+ li {
+    display: inline;
+}
+
+.app-menu nav{
+     padding : 30px 0px 0px 0px;
+     float:right;
+ }
+
+li a {
+    color: #FFFFFF;
+    font-size:22px;
+    padding-right:50px;
+    text-decoration:none;
+}
+
+li a:hover{
+    color:#C9C9C9;
+}
+
+.header{
+    float:left;
+    padding:5px 0px 0px 520px;
+     font-size:32px;
+}
+/* Online Users Count Module*/
+
+.users-online {
+    background: url("Images/online-background.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    color: white;
+    font-size: 26px;
+    height: 60px;
+    margin: 10px 0px 0px 540px;
+    padding: 15px 0;
+    text-align: center;
+    width: 200px;
+}

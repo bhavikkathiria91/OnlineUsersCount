@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Online Users Count";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="users-online">
+    Users Online
+    <br>
+    <span id="userCount"></span>
+</div>
+
+
+@Scripts.Render("~/bundles/usingsignalr")
+@Scripts.Render("~/bundles/jquerysignalr")
+<script type="text/javascript">
+    //Call GetOnlineUsersCount function to get the online users count after the DOM is ready on page load.
+    $(document).ready(function () {
+            GetOnlineUsersCount();
+    });
+</script>
+<script src="/signalr/hubs" type="text/javascript"></script>
